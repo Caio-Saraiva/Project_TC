@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494026067454821291}
+  - component: {fileID: 5046599371077435591}
   m_Layer: 0
   m_Name: SectionMaleWinter
   m_TagString: Untagged
@@ -170,6 +171,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5046599371077435591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595758195625105193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d460063a6665dc4bbaaad1cb5c49b67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonDataList:
+  - id: 13
+    title: "Jaquet\xE3o C.R.A.Z.Y."
+    description: R$ 250,00
+    image: {fileID: 21300000, guid: 586ea5403e8fa3447a965d29e3dc0715, type: 3}
+  - id: 14
+    title: "Blusa L\xE3 Branca"
+    description: R$ 190,00
+    image: {fileID: 21300000, guid: e08dfe547307c0842840f4312c1e4818, type: 3}
+  - id: 15
+    title: Sweater Gola Alta
+    description: R$ 130,00
+    image: {fileID: 21300000, guid: 31f87a7253bbea7489fce13a1c45819e, type: 3}
+  - id: 16
+    title: Jaqueta Jeans
+    description: R$ 250,00
+    image: {fileID: 21300000, guid: 79021ba5428ac3e43926709e4751fece, type: 3}
 --- !u!1 &2515860049898044699
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +212,7 @@ GameObject:
   - component: {fileID: 2229683500137084852}
   - component: {fileID: 4662105587371554449}
   - component: {fileID: 2678364266521047258}
+  - component: {fileID: 487767063247051570}
   m_Layer: 0
   m_Name: btn-Item2
   m_TagString: Untagged
@@ -291,7 +322,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4662105587371554449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 487767063247051570}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &487767063247051570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515860049898044699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 14
+  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
+    type: 3}
+  contentParent: {fileID: 0}
+  dataManager: {fileID: 5046599371077435591}
 --- !u!1 &3029612724554305089
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +1006,7 @@ GameObject:
   - component: {fileID: 3402565704464918045}
   - component: {fileID: 2457894787815505632}
   - component: {fileID: 1614819145007390634}
+  - component: {fileID: 821553480253518034}
   m_Layer: 0
   m_Name: btn-Item3
   m_TagString: Untagged
@@ -1055,7 +1116,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2457894787815505632}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 821553480253518034}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &821553480253518034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817186477302029991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 15
+  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
+    type: 3}
+  contentParent: {fileID: 0}
+  dataManager: {fileID: 5046599371077435591}
 --- !u!1 &5655935770684032978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1426,7 @@ GameObject:
   - component: {fileID: 399416597319850547}
   - component: {fileID: 538125404737595365}
   - component: {fileID: 302804017776373905}
+  - component: {fileID: 4041860173872904680}
   m_Layer: 0
   m_Name: btn-Item4
   m_TagString: Untagged
@@ -1445,7 +1536,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 538125404737595365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4041860173872904680}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4041860173872904680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6888524417950775943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 16
+  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
+    type: 3}
+  contentParent: {fileID: 0}
+  dataManager: {fileID: 5046599371077435591}
 --- !u!1 &7119981963466765934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1578,7 @@ GameObject:
   - component: {fileID: 178788459709961615}
   - component: {fileID: 391122098978262361}
   - component: {fileID: 6214652694412089623}
+  - component: {fileID: 6516155314237564594}
   m_Layer: 0
   m_Name: btn-Item1
   m_TagString: Untagged
@@ -1567,7 +1688,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391122098978262361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6516155314237564594}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6516155314237564594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119981963466765934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: 13
+  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
+    type: 3}
+  contentParent: {fileID: 0}
+  dataManager: {fileID: 5046599371077435591}
 --- !u!1 &7778165202495817673
 GameObject:
   m_ObjectHideFlags: 0
