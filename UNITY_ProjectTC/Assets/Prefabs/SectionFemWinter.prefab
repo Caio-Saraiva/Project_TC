@@ -143,7 +143,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494026067454821291}
-  - component: {fileID: 8893887087208934247}
   m_Layer: 0
   m_Name: SectionFemWinter
   m_TagString: Untagged
@@ -171,35 +170,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8893887087208934247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595758195625105193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d460063a6665dc4bbaaad1cb5c49b67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonDataList:
-  - id: 5
-    title: Cropped Florido
-    description: R$ 90,00
-    image: {fileID: 21300000, guid: 53f8f52455065974f8fdd7f42ba808ca, type: 3}
-  - id: 6
-    title: Jeans C.R.A.Z.Y.
-    description: R$ 190,00
-    image: {fileID: 21300000, guid: 6fb5aa8f9c60616468e85ed784d02e5a, type: 3}
-  - id: 7
-    title: Body Preto
-    description: R$ 100,00
-    image: {fileID: 21300000, guid: 2cbf2b14177f6d44a90e14d8abe96321, type: 3}
-  - id: 8
-    title: Vestido Manga Longa
-    description: R$ 220,00
-    image: {fileID: 21300000, guid: e41950d717095cc4997b50a77359706c, type: 3}
 --- !u!1 &2515860049898044699
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +182,6 @@ GameObject:
   - component: {fileID: 2229683500137084852}
   - component: {fileID: 4662105587371554449}
   - component: {fileID: 2678364266521047258}
-  - component: {fileID: 3944966804737169249}
   m_Layer: 0
   m_Name: btn-Item2
   m_TagString: Untagged
@@ -323,9 +292,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3944966804737169249}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EasyTween, Assembly-CSharp
+        m_MethodName: OpenCloseObjectAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -335,23 +316,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3944966804737169249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2515860049898044699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonId: 6
-  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
-    type: 3}
-  contentParent: {fileID: 0}
-  dataManager: {fileID: 8893887087208934247}
 --- !u!1 &3029612724554305089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,7 +970,6 @@ GameObject:
   - component: {fileID: 3402565704464918045}
   - component: {fileID: 2457894787815505632}
   - component: {fileID: 1614819145007390634}
-  - component: {fileID: 2401888903402731572}
   m_Layer: 0
   m_Name: btn-Item3
   m_TagString: Untagged
@@ -1117,9 +1080,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2401888903402731572}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 7
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EasyTween, Assembly-CSharp
+        m_MethodName: OpenCloseObjectAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1129,23 +1104,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2401888903402731572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4817186477302029991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonId: 7
-  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
-    type: 3}
-  contentParent: {fileID: 0}
-  dataManager: {fileID: 8893887087208934247}
 --- !u!1 &5655935770684032978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,7 +1384,6 @@ GameObject:
   - component: {fileID: 399416597319850547}
   - component: {fileID: 538125404737595365}
   - component: {fileID: 302804017776373905}
-  - component: {fileID: 5921672648245486541}
   m_Layer: 0
   m_Name: btn-Item4
   m_TagString: Untagged
@@ -1537,9 +1494,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5921672648245486541}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 8
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EasyTween, Assembly-CSharp
+        m_MethodName: OpenCloseObjectAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1549,23 +1518,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5921672648245486541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6888524417950775943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonId: 8
-  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
-    type: 3}
-  contentParent: {fileID: 0}
-  dataManager: {fileID: 8893887087208934247}
 --- !u!1 &7119981963466765934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1530,6 @@ GameObject:
   - component: {fileID: 178788459709961615}
   - component: {fileID: 391122098978262361}
   - component: {fileID: 6214652694412089623}
-  - component: {fileID: 6657608563896190700}
   m_Layer: 0
   m_Name: btn-Item1
   m_TagString: Untagged
@@ -1689,9 +1640,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6657608563896190700}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonHandler, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 5
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EasyTween, Assembly-CSharp
+        m_MethodName: OpenCloseObjectAnimation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1701,23 +1664,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6657608563896190700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119981963466765934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ddb4e1242a26b045a4f7afad7a0151c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonId: 5
-  prefabToInstantiate: {fileID: 2948564934349403743, guid: 83fa8798f798cdc438e615fdd60b0117,
-    type: 3}
-  contentParent: {fileID: 0}
-  dataManager: {fileID: 8893887087208934247}
 --- !u!1 &7778165202495817673
 GameObject:
   m_ObjectHideFlags: 0

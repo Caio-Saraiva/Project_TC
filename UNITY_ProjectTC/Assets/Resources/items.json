@@ -1,0 +1,100 @@
+{
+    "itemsShop": [
+        {
+            "id": 1,
+            "title": "Macaquinho",
+            "price": 120.00,
+            "image": "Images/Feminino Verão/macaquinho"
+        },
+        {
+            "id": 2,
+            "title": "Short Jeans",
+            "price": 75.00,
+            "image": "Images/Feminino Verão/shorts"
+        },
+        {
+            "id": 3,
+            "title": "Vestido Longo",
+            "price": 90.00,
+            "image": "Images/Feminino Verão/vestidoRoxo"
+        },
+        {
+            "id": 4,
+            "title": "Saia Preta",
+            "price": 150.00,
+            "image": "Images/Feminino Verão/saia"
+        },
+        {
+            "id": 5,
+            "title": "Cropped Florido",
+            "price": 90.00,
+            "image": "Images/Feminino Inverno/cropped"
+        },
+        {
+            "id": 6,
+            "title": "Jeans C.R.A.Z.Y.",
+            "price": 190.00,
+            "image": "Images/Feminino Inverno/jeansFem"
+        },
+        {
+            "id": 7,
+            "title": "Body Preto",
+            "price": 100.00,
+            "image": "Images/Feminino Inverno/bodyPreto"
+        },
+        {
+            "id": 8,
+            "title": "Vestido Manga Longa",
+            "price": 220.00,
+            "image": "Images/Feminino Inverno/vestido"
+        },
+        {
+            "id": 9,
+            "title": "Urso Bolado",
+            "price": 150.00,
+            "image": "Images/Masculino Verão/ursoBolado"
+        },
+        {
+            "id": 10,
+            "title": "Camiseta Branca",
+            "price": 50.00,
+            "image": "Images/Masculino Verão/camisetaBranca"
+        },
+        {
+            "id": 11,
+            "title": "Regata Preta",
+            "price": 70.00,
+            "image": "Images/Masculino Verão/regata"
+        },
+        {
+            "id": 12,
+            "title": "Camiseta Preta",
+            "price": 80.00,
+            "image": "Images/Masculino Verão/camisetaPreta"
+        },
+        {
+            "id": 13,
+            "title": "Jaquetão C.R.A.Z.Y.",
+            "price": 250.00,
+            "image": "Images/Masculino Inverno/jaqueta"
+        },
+        {
+            "id": 14,
+            "title": "Blusa Lã Branca",
+            "price": 190.00,
+            "image": "Images/Masculino Inverno/blusa"
+        },
+        {
+            "id": 15,
+            "title": "Sweater Gola Alta",
+            "price": 130.00,
+            "image": "Images/Masculino Inverno/sweater"
+        },
+        {
+            "id": 16,
+            "title": "Jaqueta Jeans",
+            "price": 250.00,
+            "image": "Images/Masculino Inverno/jaquetaJeans"
+        }
+    ]
+}
