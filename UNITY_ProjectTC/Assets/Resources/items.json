@@ -4,97 +4,129 @@
             "id": 1,
             "title": "Macaquinho",
             "price": 120.00,
-            "image": "Images/Feminino Verão/macaquinho"
+            "image": "Images/Feminino Verão/macaquinho",
+            "season": "summer",
+            "type": "female"
         },
         {
             "id": 2,
             "title": "Short Jeans",
             "price": 75.00,
-            "image": "Images/Feminino Verão/shorts"
+            "image": "Images/Feminino Verão/shorts",
+            "season": "summer",
+            "type": "female"
         },
         {
             "id": 3,
             "title": "Vestido Longo",
             "price": 90.00,
-            "image": "Images/Feminino Verão/vestidoRoxo"
+            "image": "Images/Feminino Verão/vestidoRoxo",
+            "season": "summer",
+            "type": "female"
         },
         {
             "id": 4,
             "title": "Saia Preta",
             "price": 150.00,
-            "image": "Images/Feminino Verão/saia"
+            "image": "Images/Feminino Verão/saia",
+            "season": "summer",
+            "type": "female"
         },
         {
             "id": 5,
             "title": "Cropped Florido",
             "price": 90.00,
-            "image": "Images/Feminino Inverno/cropped"
+            "image": "Images/Feminino Inverno/cropped",
+            "season": "winter",
+            "type": "female"
         },
         {
             "id": 6,
             "title": "Jeans C.R.A.Z.Y.",
             "price": 190.00,
-            "image": "Images/Feminino Inverno/jeansFem"
+            "image": "Images/Feminino Inverno/jeansFem",
+            "season": "winter",
+            "type": "female"
         },
         {
             "id": 7,
             "title": "Body Preto",
             "price": 100.00,
-            "image": "Images/Feminino Inverno/bodyPreto"
+            "image": "Images/Feminino Inverno/bodyPreto",
+            "season": "winter",
+            "type": "female"
         },
         {
             "id": 8,
             "title": "Vestido Manga Longa",
             "price": 220.00,
-            "image": "Images/Feminino Inverno/vestido"
+            "image": "Images/Feminino Inverno/vestido",
+            "season": "winter",
+            "type": "female"
         },
         {
             "id": 9,
             "title": "Urso Bolado",
             "price": 150.00,
-            "image": "Images/Masculino Verão/ursoBolado"
+            "image": "Images/Masculino Verão/ursoBolado",
+            "season": "summer",
+            "type": "male"
         },
         {
             "id": 10,
             "title": "Camiseta Branca",
             "price": 50.00,
-            "image": "Images/Masculino Verão/camisetaBranca"
+            "image": "Images/Masculino Verão/camisetaBranca",
+            "season": "summer",
+            "type": "male"
         },
         {
             "id": 11,
             "title": "Regata Preta",
             "price": 70.00,
-            "image": "Images/Masculino Verão/regata"
+            "image": "Images/Masculino Verão/regata",
+            "season": "summer",
+            "type": "male"
         },
         {
             "id": 12,
             "title": "Camiseta Preta",
             "price": 80.00,
-            "image": "Images/Masculino Verão/camisetaPreta"
+            "image": "Images/Masculino Verão/camisetaPreta",
+            "season": "summer",
+            "type": "male"
         },
         {
             "id": 13,
             "title": "Jaquetão C.R.A.Z.Y.",
             "price": 250.00,
-            "image": "Images/Masculino Inverno/jaqueta"
+            "image": "Images/Masculino Inverno/jaqueta",
+            "season": "winter",
+            "type": "male"
         },
         {
             "id": 14,
             "title": "Blusa Lã Branca",
             "price": 190.00,
-            "image": "Images/Masculino Inverno/blusa"
+            "image": "Images/Masculino Inverno/blusa",
+            "season": "winter",
+            "type": "male"
         },
         {
             "id": 15,
             "title": "Sweater Gola Alta",
             "price": 130.00,
-            "image": "Images/Masculino Inverno/sweater"
+            "image": "Images/Masculino Inverno/sweater",
+            "season": "winter",
+            "type": "male"
         },
         {
             "id": 16,
             "title": "Jaqueta Jeans",
             "price": 250.00,
-            "image": "Images/Masculino Inverno/jaquetaJeans"
+            "image": "Images/Masculino Inverno/jaquetaJeans",
+            "season": "winter",
+            "type": "male"
         }
     ]
 }
