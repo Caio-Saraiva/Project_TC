@@ -9,6 +9,7 @@ public class ItemsShop
     public string image;
     public string season;
     public string type;
+    public string size;
 }
 
 [System.Serializable]
