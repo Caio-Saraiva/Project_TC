@@ -37,6 +37,6 @@ public class CartItem : MonoBehaviour
     // Método para definir o tamanho do item no carrinho
     private void SetItemSize(string size)
     {
-        itemSize.text = size; // Define o texto com o tamanho selecionado ("P", "M", ou "G")
+        itemSize.text = "Tamanho " + size; // Define o texto com o tamanho selecionado ("P", "M", ou "G")
     }
 }
