@@ -1,29 +1,32 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Events; // Para usar UnityEvent
 using System.Collections;
-
-[System.Serializable]
-public class ItemEvent : UnityEvent<int> { }
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine.Events;
 
 public class ItemSpawner : MonoBehaviour
 {
-    [Header("Configuration")]
-    public JsonLoader jsonLoader; // Referência ao script JsonLoader
-    public GameObject itemPrefab; // Prefab que será instanciado
-    public Transform scrollViewContent; // Ponto de referência do ScrollView onde os prefabs serão instanciados
-    public DynamicPanel dynamicPanel; // Referência ao painel dinâmico que será atualizado
+    [Header("API Loader")]
+    public JsonLoader jsonLoader;  // Referência ao JsonLoader para carregar os dados da API
 
-    [Header("Event")]
-    public ItemEvent onItemButtonClicked; // Evento para chamar métodos de outros GameObjects
+    [Header("UI References")]
+    public GameObject itemPrefab;  // Prefab que será instanciado
+    public Transform scrollViewContent;  // Conteúdo do ScrollView onde os prefabs serão instanciados
+    public TextMeshProUGUI filterText;  // Campo de texto para exibir os filtros aplicados
+    public DynamicPanel dynamicPanel;   // Referência ao painel dinâmico
 
     [Header("Filter Settings")]
-    public string selectedType = "female"; // Opções: "female", "male"
-    public string selectedSeason = "summer"; // Opções: "summer", "winter"
+    public string selectedCategory = "Calca"; // Categoria, ex: Calca, Camiseta
+    public string selectedGender = "F";      // Gênero, ex: M (masculino) ou F (feminino)
 
-    [Header("UI Element")]
-    public TextMeshProUGUI filterText; // O GameObject TextMeshProUGUI que será atualizado
+    [Header("Textos para Filtro")]
+    public string categoryText; // Texto configurável no Inspector para a categoria
+    public string genderText;   // Texto configurável no Inspector para o gênero
+
+    [Header("Eventos Dinâmicos")]
+    public UnityEvent itemButtonEvents;  // Lista de eventos configurados no Inspector
 
     void Start()
     {
@@ -34,123 +37,93 @@ public class ItemSpawner : MonoBehaviour
     {
         while (!jsonLoader.IsJsonLoaded())
         {
-            yield return null;
+            yield return null; // Espera até a próxima frame
         }
 
-        // Define o texto com base no filtro selecionado
         UpdateFilterText();
-
-        Debug.Log("JSON carregado com sucesso. Agora os itens podem ser instanciados.");
         SpawnItems();
     }
 
     void UpdateFilterText()
     {
-        // Verifica a combinação de filtro (type e season) e atribui o valor correspondente ao texto
-        if (selectedType == "male" && selectedSeason == "winter")
-        {
-            filterText.text = "Inverno Masculino";
-        }
-        else if (selectedType == "male" && selectedSeason == "summer")
-        {
-            filterText.text = "Verão Masculino";
-        }
-        else if (selectedType == "female" && selectedSeason == "winter")
-        {
-            filterText.text = "Inverno Feminino";
-        }
-        else if (selectedType == "female" && selectedSeason == "summer")
-        {
-            filterText.text = "Verão Feminino";
-        }
-        else
-        {
-            filterText.text = "Filtro Desconhecido";
-        }
+        filterText.text = $"{categoryText} - {genderText}";
     }
 
     void SpawnItems()
     {
-        // Limpa os itens anteriores no ScrollView, se houver
         foreach (Transform child in scrollViewContent)
         {
             Destroy(child.gameObject);
         }
 
-        // Carrega os itens filtrados e instancia os prefabs
-        foreach (var item in jsonLoader.itemsShopList.itemsShop)
+        var filteredItems = jsonLoader.itemsShopList.itemsShop
+            .Where(item => IsItemValid(item))
+            .GroupBy(item => item.nome)
+            .ToList();
+
+        foreach (var group in filteredItems)
         {
-            if (IsItemValid(item))
-            {
-                InstantiateItem(item);
-            }
+            CreateGroupedPrefab(group.Key, group.ToList());
         }
     }
 
     bool IsItemValid(ItemsShop item)
     {
-        return item.type == selectedType && item.season == selectedSeason;
+        return item.categoria == selectedCategory && item.genero == selectedGender;
     }
 
-    void InstantiateItem(ItemsShop item)
+    void CreateGroupedPrefab(string nome, List<ItemsShop> groupedItems)
     {
-        // Instancia o prefab no ScrollView
         GameObject newItem = Instantiate(itemPrefab, scrollViewContent);
 
         PrefabItemData prefabItemData = newItem.GetComponent<PrefabItemData>();
         if (prefabItemData != null)
         {
-            prefabItemData.itemId = item.id;
+            prefabItemData.SetGroupedItems(groupedItems);
         }
 
-        // Configura a imagem do prefab
         Image itemImage = newItem.transform.Find("img-Item").GetComponent<Image>();
         if (itemImage != null)
         {
-            Sprite itemSprite = Resources.Load<Sprite>(item.image);
+            Sprite itemSprite = Resources.Load<Sprite>("Images/" + nome);
             if (itemSprite != null)
             {
                 itemImage.sprite = itemSprite;
             }
         }
 
-        // Configura o título (TextMeshProUGUI)
         TextMeshProUGUI itemTitle = newItem.transform.Find("txt-name").GetComponent<TextMeshProUGUI>();
         if (itemTitle != null)
         {
-            itemTitle.text = item.title;
+            itemTitle.text = nome;
         }
 
-        // Configura o preço (TextMeshProUGUI)
         TextMeshProUGUI itemPrice = newItem.transform.Find("txt-price").GetComponent<TextMeshProUGUI>();
         if (itemPrice != null)
         {
-            itemPrice.text = $"R$ {item.price:F2}";
+            itemPrice.text = $"R$ {groupedItems[0].valor_unidade:F2}";
         }
 
-        // Configura o botão do prefab para atualizar o painel dinâmico e acionar eventos
         Button itemButton = newItem.GetComponent<Button>();
         if (itemButton != null)
         {
-            // Listener para atualizar o painel dinâmico
-            itemButton.onClick.AddListener(() => UpdateDynamicPanel(item.id));
-
-            // Listener para chamar o evento UnityEvent
-            itemButton.onClick.AddListener(() => onItemButtonClicked.Invoke(item.id));
+            itemButton.onClick.AddListener(() => {
+                PassCodProdutoListToPanel(prefabItemData.GetCodProdutoList());
+                SetupDynamicEvents();
+            });
         }
     }
 
-    void UpdateDynamicPanel(int itemId)
+    void PassCodProdutoListToPanel(List<int> codProdutoList)
     {
-        // Busca o item pelo ID no JsonLoader
-        ItemsShop item = jsonLoader.GetElementById(itemId);
-        if (item != null)
+        dynamicPanel.UpdatePanelByCodProdutoList(codProdutoList);
+    }
+
+    void SetupDynamicEvents()
+    {
+        if (itemButtonEvents != null)
         {
-            dynamicPanel.UpdatePanel(item); // Atualiza o painel com os dados do item
-        }
-        else
-        {
-            Debug.LogError("Item com ID " + itemId + " não encontrado.");
+            itemButtonEvents.Invoke();
         }
     }
 }

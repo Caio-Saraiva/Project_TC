@@ -19,14 +19,13 @@ public class CartItem : MonoBehaviour
     // Método que carrega os dados do item com base no ID
     private void LoadItemData(int id, JsonLoader jsonLoader)
     {
-        ItemsShop itemData = jsonLoader.GetElementById(id);
+        ItemsShop itemData = jsonLoader.GetElementByCodProduto(id);
 
         if (itemData != null)
         {
-            // Supondo que você tenha algum método para carregar sprites baseado no nome da imagem
-            itemImage.sprite = Resources.Load<Sprite>(itemData.image);
-            itemName.text = itemData.title;
-            itemPrice.text = "R$ " + itemData.price.ToString("F2"); // Formatação de preço
+            itemImage.sprite = Resources.Load<Sprite>("Images/" + itemData.nome);
+            itemName.text = itemData.nome;
+            itemPrice.text = "R$ " + itemData.valor_unidade.ToString("F2"); // Formatação de preço
         }
         else
         {
@@ -37,6 +36,6 @@ public class CartItem : MonoBehaviour
     // Método para definir o tamanho do item no carrinho
     private void SetItemSize(string size)
     {
-        itemSize.text = "Tamanho " + size; // Define o texto com o tamanho selecionado ("P", "M", ou "G")
+        itemSize.text = "Tamanho " + size; // Define o texto com o tamanho selecionado
     }
 }
