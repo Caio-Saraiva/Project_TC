@@ -1,41 +1,42 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CartItem : MonoBehaviour
 {
-    [SerializeField] private Image itemImage;
-    [SerializeField] private TextMeshProUGUI itemName;
-    [SerializeField] private TextMeshProUGUI itemPrice;
-    [SerializeField] private TextMeshProUGUI itemSize;
+    public Image itemImage; // A imagem do item
+    public TextMeshProUGUI itemName; // O nome do item
+    public TextMeshProUGUI itemPrice; // O preço do item
+    public TextMeshProUGUI itemSize; // O tamanho do item
+    public TextMeshProUGUI itemColor; // A cor do item
 
-    // Método chamado para inicializar o item do carrinho com base no ID e tamanho
-    public void Initialize(int id, string size, JsonLoader jsonLoader)
-    {
-        LoadItemData(id, jsonLoader);
-        SetItemSize(size); // Define o tamanho selecionado
-    }
+    private JsonLoader jsonLoader;
 
-    // Método que carrega os dados do item com base no ID
-    private void LoadItemData(int id, JsonLoader jsonLoader)
+    // Método para inicializar o item no carrinho
+    public void Initialize(int id, string selectedSize, JsonLoader jsonLoader)
     {
         ItemsShop itemData = jsonLoader.GetElementByCodProduto(id);
 
         if (itemData != null)
         {
-            itemImage.sprite = Resources.Load<Sprite>("Images/" + itemData.nome);
+            // Define a imagem do item
+            itemImage.sprite = Resources.Load<Sprite>("Images/" + itemData.genero + "/" + itemData.nome);
+
+            // Define o nome do item
             itemName.text = itemData.nome;
-            itemPrice.text = "R$ " + itemData.valor_unidade.ToString("F2"); // Formatação de preço
+
+            // Define o preço do item
+            itemPrice.text = "R$ " + itemData.valor_unidade.ToString("F2");
+
+            // Define o tamanho selecionado do item
+            itemSize.text = "Tamanho: " + selectedSize;
+
+            // Define a cor do item
+            itemColor.text = "Cor: " + itemData.cor;
         }
         else
         {
             Debug.LogError("Item com ID " + id + " não encontrado!");
         }
-    }
-
-    // Método para definir o tamanho do item no carrinho
-    private void SetItemSize(string size)
-    {
-        itemSize.text = "Tamanho " + size; // Define o texto com o tamanho selecionado
     }
 }

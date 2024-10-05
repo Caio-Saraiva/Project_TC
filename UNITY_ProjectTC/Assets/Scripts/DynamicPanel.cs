@@ -49,18 +49,20 @@ public class DynamicPanel : MonoBehaviour
         titleText.text = item.nome;
         priceText.text = "R$ " + item.valor_unidade.ToString("F2");
 
-        Sprite sprite = Resources.Load<Sprite>("Images/" + item.nome);
+        // Carrega a imagem usando o caminho com gênero e nome
+        Sprite sprite = Resources.Load<Sprite>("Images/" + item.genero + "/" + item.nome);
         if (sprite != null)
         {
             panelImage.sprite = sprite;
         }
         else
         {
-            Debug.LogError("Imagem não encontrada em Resources/Images/" + item.nome);
+            Debug.LogError("Imagem não encontrada em Resources/Images/" + item.genero + "/" + item.nome);
         }
 
         SetDropdownSelections(item);
     }
+
 
     // Atualiza os Dropdowns com base nos itens armazenados
     private void UpdateDropdownOptions()

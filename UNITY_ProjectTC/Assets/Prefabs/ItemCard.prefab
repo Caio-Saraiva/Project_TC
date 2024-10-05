@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93e0c182996486a49bf416b49194bbb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea72b0b9eca56704d9a22d8d18298597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -211,7 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8bc3244696a2344db4d220888610d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 0
+  codProdutoList: 
+  codProduto: 0
 --- !u!1 &7318036592353750570
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,8 +423,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4282794056
+  m_fontColor: {r: 0.2830189, g: 0.252314, b: 0.27483094, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

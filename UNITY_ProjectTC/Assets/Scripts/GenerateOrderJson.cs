@@ -36,8 +36,8 @@ public class GenerateOrderJson : MonoBehaviour
         jsonLoader = FindObjectOfType<JsonLoader>(); // Obtém o JsonLoader na cena
     }
 
-    // Método chamado ao pressionar o botão para gerar o JSON
-    public void GenerateJson()
+    // Método chamado ao pressionar o botão para gerar o JSON e retornar o Pedido
+    public Pedido GenerateOrderJsonAndReturn()
     {
         Pedido pedido = new Pedido();
         pedido.cod_cliente = codCliente; // Define o código do cliente
@@ -107,8 +107,8 @@ public class GenerateOrderJson : MonoBehaviour
                 TextMeshProUGUI newText = Instantiate(textPrefab, outputContent);
 
                 // Formata o texto com os detalhes do item
-                string itemLine = $">> <b>Produto:</b> {itemData.nome}    <b>Tamanho:</b> {itemData.tamanho}    <b>Cor:</b> {itemData.cor}\n";
-                string valueLine = $"      <b>Quantidade:</b> {pedidoItem.qtd_pedido}        <b>Valor por unidade:</b> R$ {Math.Round(itemData.valor_unidade, 2):F2}\n";
+                string itemLine = $">> <b>Item:</b> {itemData.nome}      <b>Tamanho:</b> {itemData.tamanho}    <b>Cor:</b> {itemData.cor}\n";
+                string valueLine = $"      <b>Quantidade:</b> {pedidoItem.qtd_pedido}     <b>Valor por item:</b> R$ {Math.Round(itemData.valor_unidade, 2):F2}\n";
 
                 // Define o texto no novo TextMeshProUGUI instanciado
                 newText.text = itemLine + valueLine;
@@ -118,7 +118,13 @@ public class GenerateOrderJson : MonoBehaviour
         // Define o valor total do pedido arredondado
         pedido.valor_pedido = Math.Round(valorTotal, 2);
 
-        // Gera o JSON (usando JsonConvert ou JsonUtility)
+        return pedido; // Retorna o objeto Pedido gerado
+    }
+
+    // Método chamado ao pressionar o botão para apenas gerar o JSON e exibi-lo no console
+    public void GenerateJson()
+    {
+        Pedido pedido = GenerateOrderJsonAndReturn(); // Gera o pedido e retorna o objeto
         string jsonResult = JsonConvert.SerializeObject(pedido, Formatting.Indented); // Para Json.NET
         Debug.Log(jsonResult);
 

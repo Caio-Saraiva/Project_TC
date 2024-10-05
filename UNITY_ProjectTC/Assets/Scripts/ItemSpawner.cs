@@ -85,10 +85,15 @@ public class ItemSpawner : MonoBehaviour
         Image itemImage = newItem.transform.Find("img-Item").GetComponent<Image>();
         if (itemImage != null)
         {
-            Sprite itemSprite = Resources.Load<Sprite>("Images/" + nome);
+            // Usa o caminho com gênero e nome
+            Sprite itemSprite = Resources.Load<Sprite>("Images/" + groupedItems[0].genero + "/" + nome);
             if (itemSprite != null)
             {
                 itemImage.sprite = itemSprite;
+            }
+            else
+            {
+                Debug.LogError("Imagem não encontrada em Resources/Images/" + groupedItems[0].genero + "/" + nome);
             }
         }
 
@@ -113,6 +118,7 @@ public class ItemSpawner : MonoBehaviour
             });
         }
     }
+
 
     void PassCodProdutoListToPanel(List<int> codProdutoList)
     {
