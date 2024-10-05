@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494026067454821291}
+  - component: {fileID: 178362556538509165}
   m_Layer: 0
   m_Name: SeasonSelector
   m_TagString: Untagged
@@ -36,6 +37,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &178362556538509165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595758195625105193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec1d365a56abc0429cd7d3ca6ae7416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textImageReferencePairs:
+  - textObject: {fileID: 4210076868905252873}
+    referenceString: 
+    imageObject: {fileID: 8131224937664726695}
+    referenceSprite: {fileID: 0}
+  - textObject: {fileID: 284840601159115377}
+    referenceString: 
+    imageObject: {fileID: 5752660766354384810}
+    referenceSprite: {fileID: 0}
+  - textObject: {fileID: 3774804863982238248}
+    referenceString: 
+    imageObject: {fileID: 6729590155733723684}
+    referenceSprite: {fileID: 0}
+  - textObject: {fileID: 5968157579180998733}
+    referenceString: 
+    imageObject: {fileID: 4363617802111269814}
+    referenceSprite: {fileID: 0}
 --- !u!1 &1314549419041302533
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +153,7 @@ GameObject:
   - component: {fileID: 4601791660312886234}
   - component: {fileID: 5752660766354384810}
   m_Layer: 0
-  m_Name: img-Persona
+  m_Name: img-section2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,7 +206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ea8cfba296a0a614c9b92446ae297c22, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,7 +591,7 @@ GameObject:
   - component: {fileID: 4446943910091865578}
   - component: {fileID: 6729590155733723684}
   m_Layer: 0
-  m_Name: img-Persona
+  m_Name: img-section3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +644,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 534c8ebd22e25ae499edda75b14d4304, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -741,7 +771,7 @@ GameObject:
   - component: {fileID: 6140644685134408303}
   - component: {fileID: 284840601159115377}
   m_Layer: 0
-  m_Name: txt-Name
+  m_Name: txt-Name2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -763,8 +793,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 190, y: 22}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 235, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6140644685134408303
 CanvasRenderer:
@@ -794,10 +824,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Inverno Feminino
+  m_text: '#########'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6, type: 2}
-  m_sharedMaterial: {fileID: -1685953593246184032, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6,
+  m_fontAsset: {fileID: 11400000, guid: d689dc663d3577b41ad6f0c74f7ee66d, type: 2}
+  m_sharedMaterial: {fileID: 5624524132451019750, guid: d689dc663d3577b41ad6f0c74f7ee66d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -822,15 +852,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -951,7 +981,7 @@ GameObject:
   - component: {fileID: 116305671183294126}
   - component: {fileID: 3774804863982238248}
   m_Layer: 0
-  m_Name: txt-Name
+  m_Name: txt-Name3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,8 +1003,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 190, y: 22}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 235, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &116305671183294126
 CanvasRenderer:
@@ -1004,10 +1034,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ver\xE3o Masculino"
+  m_text: '#########'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6, type: 2}
-  m_sharedMaterial: {fileID: -1685953593246184032, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6,
+  m_fontAsset: {fileID: 11400000, guid: d689dc663d3577b41ad6f0c74f7ee66d, type: 2}
+  m_sharedMaterial: {fileID: 5624524132451019750, guid: d689dc663d3577b41ad6f0c74f7ee66d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1032,15 +1062,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1161,7 +1191,7 @@ GameObject:
   - component: {fileID: 3938972968044072649}
   - component: {fileID: 5968157579180998733}
   m_Layer: 0
-  m_Name: txt-Name
+  m_Name: txt-Name4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1183,8 +1213,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 190, y: 22}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 235, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3938972968044072649
 CanvasRenderer:
@@ -1214,10 +1244,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Inverno Masculino
+  m_text: '#########'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6, type: 2}
-  m_sharedMaterial: {fileID: -1685953593246184032, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6,
+  m_fontAsset: {fileID: 11400000, guid: d689dc663d3577b41ad6f0c74f7ee66d, type: 2}
+  m_sharedMaterial: {fileID: 5624524132451019750, guid: d689dc663d3577b41ad6f0c74f7ee66d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1242,15 +1272,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1659,7 +1689,7 @@ GameObject:
   - component: {fileID: 6487084471170882479}
   - component: {fileID: 4363617802111269814}
   m_Layer: 0
-  m_Name: img-Persona
+  m_Name: img-section4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 18ce66f174c28da4fa3dc9065eaa9b6c, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1959,7 +1989,7 @@ GameObject:
   - component: {fileID: 4194188166945406968}
   - component: {fileID: 4210076868905252873}
   m_Layer: 0
-  m_Name: txt-Name
+  m_Name: txt-Name1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1981,8 +2011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
-  m_SizeDelta: {x: 190, y: 22}
+  m_AnchoredPosition: {x: 0, y: 140}
+  m_SizeDelta: {x: 235, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4194188166945406968
 CanvasRenderer:
@@ -2012,10 +2042,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ver\xE3o Feminino"
+  m_text: '#########'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6, type: 2}
-  m_sharedMaterial: {fileID: -1685953593246184032, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6,
+  m_fontAsset: {fileID: 11400000, guid: d689dc663d3577b41ad6f0c74f7ee66d, type: 2}
+  m_sharedMaterial: {fileID: 5624524132451019750, guid: d689dc663d3577b41ad6f0c74f7ee66d,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2040,15 +2070,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2520,7 +2550,7 @@ GameObject:
   - component: {fileID: 3680775765868978688}
   - component: {fileID: 8131224937664726695}
   m_Layer: 0
-  m_Name: img-Persona
+  m_Name: img-section1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2573,7 +2603,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c82be079dc2499429c9a65cd7cdef27, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

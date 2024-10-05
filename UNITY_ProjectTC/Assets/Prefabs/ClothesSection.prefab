@@ -128,13 +128,15 @@ MonoBehaviour:
   itemPrefab: {fileID: 5528101802072108941, guid: 6120cfcea3a9d4b4c98b48d9d75680a1,
     type: 3}
   scrollViewContent: {fileID: 1867710847766236625}
+  filterText: {fileID: 5052184085357720454}
   dynamicPanel: {fileID: 0}
-  onItemButtonClicked:
+  selectedCategory: Calca
+  selectedGender: F
+  categoryText: 
+  genderText: 
+  itemButtonEvents:
     m_PersistentCalls:
       m_Calls: []
-  selectedType: male
-  selectedSeason: winter
-  filterText: {fileID: 5052184085357720454}
 --- !u!1 &3029612724554305089
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,8 +307,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Ver\xE3o Feminino"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6, type: 2}
-  m_sharedMaterial: {fileID: -1685953593246184032, guid: f2b0fbd74f3ab5c4b92c5f2096ca65b6,
+  m_fontAsset: {fileID: 11400000, guid: fc4eac6207f53264e9e9662bd7eb8dd0, type: 2}
+  m_sharedMaterial: {fileID: -3518747496300437562, guid: fc4eac6207f53264e9e9662bd7eb8dd0,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
