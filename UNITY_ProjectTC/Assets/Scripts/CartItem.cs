@@ -19,8 +19,8 @@ public class CartItem : MonoBehaviour
 
         if (itemData != null)
         {
-            // Define a imagem do item
-            itemImage.sprite = Resources.Load<Sprite>("Images/" + itemData.genero + "/" + itemData.nome);
+            // Define a imagem do item usando o caminho com gênero, categoria e nome
+            itemImage.sprite = Resources.Load<Sprite>("Images/" + itemData.genero + "/" + itemData.categoria + "/" + itemData.nome);
 
             // Define o nome do item
             itemName.text = itemData.nome;
@@ -39,4 +39,5 @@ public class CartItem : MonoBehaviour
             Debug.LogError("Item com ID " + id + " não encontrado!");
         }
     }
+
 }

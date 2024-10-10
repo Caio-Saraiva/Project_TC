@@ -12,7 +12,8 @@ public class PostRequestHandler : MonoBehaviour
     [SerializeField] private string apiUrl = "https://example.com/api/post"; // URL da API para enviar a requisição POST
     [SerializeField] private UnityEvent onSuccess; // Lista de eventos para sucesso
     [SerializeField] private UnityEvent onFailure; // Lista de eventos para falha
-    [SerializeField] private TextMeshProUGUI codPedidoText; // Campo para mostrar o código do pedido
+    [SerializeField] private TextMeshProUGUI codPedidoText; // Campo para mostrar o código do pedido gerado
+    [SerializeField] private ScrollViewManager scrollViewManager; // Referência ao script ScrollViewManager para gerenciar a instância dos pedidos
 
     // Método para enviar o pedido via POST após a revisão
     public void SendOrderToApi()
@@ -61,6 +62,15 @@ public class PostRequestHandler : MonoBehaviour
                 {
                     codPedidoText.text = "#" + codPedido;
                 }
+
+                // Salva o cod_pedido nos PlayerPrefs (separando pedidos por vírgula)
+                string savedPedidos = PlayerPrefs.GetString("cod_pedidos", "");
+                savedPedidos = string.IsNullOrEmpty(savedPedidos) ? codPedido : savedPedidos + "," + codPedido;
+                PlayerPrefs.SetString("cod_pedidos", savedPedidos);
+                PlayerPrefs.Save();
+
+                // Passa a responsabilidade de instanciar o pedido ao ScrollViewManager
+                scrollViewManager.InstantiatePrefabIfNotExists(codPedido);
             }
             onSuccess?.Invoke(); // Invoca os eventos de sucesso
         }

@@ -49,7 +49,7 @@ public class CartTotalCalculator : MonoBehaviour
         // Atualiza todos os campos TextMeshProUGUI com o valor total
         foreach (var totalText in totalTexts)
         {
-            totalText.text = "Total: R$ " + total.ToString("F2");
+            totalText.text = "R$: " + total.ToString("F2");
         }
 
         // Atualiza o campo que exibe a quantidade de itens no carrinho
