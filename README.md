@@ -19,4 +19,10 @@ Este estudo busca contribuir para o debate sobre o comércio varejista e o impac
 
 ### Power BI [CALFJ&CO Analytics](https://app.powerbi.com/view?r=eyJrIjoiZTNhYTI1NGMtYTA0Ni00NGZkLThkMjUtN2I3ZGIwYjUyMDNmIiwidCI6IjM2MjdmZTMwLWFjODItNGRkYi1iMGFjLTUxMDcxNjdjYzc1NSJ9)
 
+https://github.com/user-attachments/assets/cca45845-b3a0-494f-bcdc-1a87a2d0b642
+
 ### Website [CALFJ&CO Store](https://calfjco.web.app/)
+
+https://github.com/user-attachments/assets/3e2a1e56-0c4b-4b91-ad75-7012f12ab828
+
+
